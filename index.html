@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Operación Extracción - FPS 3D</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Import Maps para Three.js y sus complementos (Loaders y Controles) -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+<body>
+    <!-- Pantalla de bloqueo inicial para activar el Mouse FPS -->
+    <div id="blocker">
+        <div id="instructions">
+            <span style="font-size:36px">HAZ CLIC PARA JUGAR</span>
+            <br /><br />
+            Mover: W, A, S, D<br/>
+            Mirar: Mouse<br/>
+            Disparar: Clic Izquierdo<br/>
+            Cambiar Arma: 1 y 2
+        </div>
+    </div>
+
+    <!-- Interfaz de Juego (HUD) -->
+    <div id="crosshair">+</div>
+    <div id="hud">
+        <div id="weapon-info">Arma: <span id="weapon-name">Rifle</span></div>
+        <div id="ammo-info">Munición: <span id="ammo-count">30</span></div>
+    </div>
+    <div id="message-overlay"></div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
